@@ -107,7 +107,8 @@ class Input:
 
     def validate(self) -> None:
         missing_arguments = []
-
+        print("self._definition.arguments", self._definition.arguments)
+        print("self._arguments", self._arguments)
         for argument in self._definition.arguments:
             if argument.name not in self._arguments and argument.is_required():
                 missing_arguments.append(argument.name)
